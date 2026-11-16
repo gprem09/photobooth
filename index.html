@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photobooth</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-view="camera">
+  <main>
+    <section class="camera">
+      <div class="viewfinder">
+        <video id="video" autoplay playsinline muted></video>
+        <div id="countdown" class="countdown" aria-live="assertive"></div>
+        <div id="flash" class="flash"></div>
+      </div>
+      <div id="dots" class="dots" aria-hidden="true"></div>
+      <button id="shutter" class="shutter" type="button" aria-label="Take four photos" disabled></button>
+    </section>
+
+    <section class="result">
+      <img id="strip" alt="Your photo strip">
+      <div class="actions">
+        <a id="download" class="button primary" download>Download</a>
+        <button id="print" class="button" type="button">Print</button>
+        <button id="retake" class="button quiet" type="button">Retake</button>
+      </div>
+    </section>
+
+    <section class="error" role="alert">
+      <p id="message"></p>
+      <button id="retry" class="button" type="button">Try again</button>
+    </section>
+  </main>
+</body>
+</html>
